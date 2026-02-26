@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS Clouds Beauty Spark | Luxury Salon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+}
+
+/* Typography */
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d4af37; /* Gold Spark */
+    font-style: italic;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+}
+
+.btn-book {
+    background: #d4af37;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 35px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: white;
+    color: black;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 10%;
+    text-align: center;
+}
+/* Updated Hero Section with New Background */
+.hero {
+    height: 90vh; /* Increased height for a more dramatic look */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), 
+                url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center top; /* Focuses on the face/hair area */
+    background-attachment: fixed; /* Optional: Creates a cool parallax scrolling effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 5rem; /* Larger font for a luxury feel */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+</style>
+<link rel="icon" type="image/png" href="logo-icon.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="logo-icon.png" alt="KS Clouds Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+        <div class="logo">KS CLOUDS <span>Beauty Spark</span></div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+             <li><a href="contactus.html">Conact Us</a></li>
+            <li><a href="booknow.html" class="btn-book">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Glow</h1>
+            <p>Where ethereal beauty meets expert precision.</p>
+            <a href="#services" class="cta-button">Explore Services</a>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <h2>Our Signature Sparks</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="braids.png" alt="Hair Styling">
+                <h3>Cloud Styling</h3>
+                <p>Weightless hair designs and luxury extensions.</p>
+            </div>
+            <div class="service-card">
+                <img src="skin care.jpg" alt="skin care">
+                <h3>Spark Glow</h3>
+                <p>Professional makeup for your most radiant moments.</p>
+            </div>
+            <div class="service-card">
+                <img src="nails.jpg" alt="Nail Art">
+                <h3>Mist Facials</h3>
+                <p>Rejuvenating treatments for a heavenly complexion.</p>
+            </div>
+             <div class="service-card">
+                <img src="bridal.jpg" alt="Bridal makeup">
+                <h3>Bridal Makeup and Styling</h3>
+                <p>Relooking you to your own role model.</p>
+            </div>
+            <div class="service-card">
+                <img src="lashes.jpg" alt="Lash instal">
+                <h3>Lash Installation</h3>
+                <p>The vision of Eagles and elagance of peacocks.</p>
+            </div>
+            <div class="service-card">
+                <img src="wig.jpg" alt="Wig instal">
+                <h3>Wig Installments</h3>
+                <p>Become that woman of impact you have always dreamt about.</p>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+    <div style="margin-bottom: 15px;">
+        <img src="logo-icon.png" alt="KS Clouds Logo" style="height: 50px; opacity: 0.8;">
+    </div>
+    <p>&copy; 2026 KS Clouds Beauty Spark. Designed for elegance.</p>
+</footer>
+
+</body>
+</html>

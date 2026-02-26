@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Glamour Gallery | African Beauty Salon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="gallery.css" rel="stylesheet">
+    <style>
+        :root {
+    --gold: #d4af37;
+    --chocolate: #3d2b1f;
+    --cream: #fffaf0;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 50px;
+}
+
+/* Header Styling */
+.gallery-header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.gallery-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--chocolate);
+    margin-bottom: 10px;
+}
+
+.filter-bar {
+    margin-top: 30px;
+}
+
+.filter-bar span {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #888;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.filter-bar span.active, .filter-bar span:hover {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+}
+
+/* Masonry Grid Layout */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Staggered Grid Effect */
+.tall {
+    grid-row: span 2;
+}
+
+/* Card Content Overlay */
+.card-content {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content h3 {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #ddd;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Call to Action Button */
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--chocolate);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .gallery-container {
+        grid-auto-rows: 350px;
+    }
+    .tall {
+        grid-row: span 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d4af37; /* Gold Spark */
+    font-style: italic;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+}
+
+.btn-book {
+    background: #d4af37;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo-icon.png" alt="KS Clouds Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+        <div class="logo">KS CLOUDS <span>Beauty Spark</span></div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+             <li><a href="contactus.html">Conact Us</a></li>
+            <li><a href="booknow.html" class="btn-book">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <header class="gallery-header">
+        <h1>Our Signature Glow</h1>
+        <p>Expertly crafted looks for the modern African woman</p>
+        <div class="filter-bar">
+            <span class="active">All</span>
+            <span>Hair</span>
+            <span>Nails</span>
+            <span>Makeup</span>
+            <span>Skin</span>
+        </div>
+    </header>
+
+    <main class="gallery-container">
+        <div class="card tall">
+            <img src="bridal.jpg" alt="African Bridal Makeup">
+            <div class="card-content">
+                <h3>Bridal Majesty</h3>
+                <p>Full-glam traditional & white wedding looks.</p>
+                <a href="#" class="btn">Book Session</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="wig.jpg" alt="Lace Frontal Installation">
+            <div class="card-content">
+                <h3>Seamless Frontals</h3>
+                <p>Melted lace & styled baby hairs.</p>
+                <a href="#" class="btn">Book Install</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="nails.jpg" alt="Gel Nail Design">
+            <div class="card-content">
+                <h3>Luxury Gel Art</h3>
+                <p>Custom designs for every occasion.</p>
+                <a href="#" class="btn">View Designs</a>
+            </div>
+        </div>
+
+        <div class="card tall">
+            <img src="skin care.jpg" alt="Skincare Facial">
+            <div class="card-content">
+                <h3>Melanin Glow</h3>
+                <p>Deep cleansing & hydration treatments.</p>
+                <a href="#" class="btn">Treat Yourself</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="lashes.jpg" alt="Artificial Lashes">
+            <div class="card-content">
+                <h3>Lash Extension</h3>
+                <p>Volume and length with a natural feel.</p>
+                <a href="#" class="btn">Book Lashes</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="#" alt="Braids">
+            <div class="card-content">
+                <h3>Precision Braids</h3>
+                <p>Knotless, Goddess, and Box braids.</p>
+                <a href="#" class="btn">Book Braids</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
